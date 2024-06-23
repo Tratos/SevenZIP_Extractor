@@ -7,8 +7,6 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Drawing;
 
-//string commandLineString = "x -o" + extractpath + " \"" + zipPath + @"""" + "-p" + passwords;
-
 namespace SevenZip
 {
     public static class Helper
@@ -21,8 +19,6 @@ namespace SevenZip
                 processExtract.FileName = pZipPath;
                 string commandLineString = "x -o" + extractpath + " \"" + zipPath + @"""" + " -p" + passwords;
                 processExtract.Arguments = commandLineString;
-
-                //Logger.Log("Command: " + commandLineString);
 
                 processExtract.WindowStyle = ProcessWindowStyle.Hidden;
                 Process x = Process.Start(processExtract);

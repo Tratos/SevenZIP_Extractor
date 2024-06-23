@@ -42,7 +42,7 @@ namespace SevenZip
         {
             OpenFileDialog d = new OpenFileDialog();
             d.InitialDirectory = ApplicationPath();
-            d.Filter = "*.7z|*.7z";
+            d.Filter = "7-ZIP files (*.7z)|*.7z|All files (*.*)|*.*";
             if (d.ShowDialog() == DialogResult.OK)
             {
                 dataInput = d.FileName;
@@ -63,7 +63,7 @@ namespace SevenZip
                 d.InitialDirectory = "C:\\Program Files\\7-Zip\\";
             }
 
-            d.Filter = "*.exe|*.exe";
+            d.Filter = "exe files (*.exe)|*.exe";
             if (d.ShowDialog() == DialogResult.OK)
             {
                 dataExe = d.FileName;
@@ -89,7 +89,7 @@ namespace SevenZip
         {
             OpenFileDialog d = new OpenFileDialog();
             d.InitialDirectory = ApplicationPath();
-            d.Filter = "*.txt|*.txt";
+            d.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             if (d.ShowDialog() == DialogResult.OK)
             {
                 dataRead = d.FileName;
